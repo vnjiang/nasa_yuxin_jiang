@@ -1,14 +1,14 @@
 
 import { render, screen, fireEvent } from '@testing-library/react'
-import Home from './home'
+import Home from '../components/home'
 
 
-jest.mock('./earth', () => () => <div data-testid="earth"></div>)
-jest.mock('./typewriter', () => ({ onDone }) => {
+jest.mock('../components/earth', () => () => <div data-testid="earth"></div>)
+jest.mock('../components/typewriter', () => ({ onDone }) => {
   setTimeout(() => onDone && onDone(), 1)
   return <div data-testid="typewriter">Typewriter</div>
 })
-jest.mock('./musicplayer', () => () => <div data-testid="musicplayer"></div>)
+jest.mock('../components/musicplayer', () => () => <div data-testid="musicplayer"></div>)
 
 describe('Home component', () => {
   it('shows "Click to start your journey" and does NOT show Earth initially', () => {
@@ -38,3 +38,4 @@ describe('Home component', () => {
     expect(handleEnter).toHaveBeenCalled()
   })
 })
+
