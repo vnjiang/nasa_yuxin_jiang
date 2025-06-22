@@ -121,7 +121,7 @@ export default function Apod() {
           {/* collapse icon */}
           <button
             className="absolute top-2 right-3 z-30 bg-black/50 rounded-full p-2 hover:bg-black/70"
-            style={{ fontSize: 32, color: "white" }}
+            style={{ fontSize: 26, color: "white" }}
             title="Hide"
             onClick={() => setCollapsed(true)}
           >
@@ -129,10 +129,10 @@ export default function Apod() {
             </button>
 
 
-          <div className="  flex flex-col items-center gap-4 w-full px-3 sm:px-6 py-4 sm:py-6 rounded-2xl  bg-black/40 backdrop-blur-md ">
+          <div className="  flex flex-col items-center gap-4 w-full px-3 sm:px-4 py-4 sm:py-6 rounded-2xl  bg-black/40 backdrop-blur-md ">
         
               {/*title */}
-            <h2 className="text-xl sm:text-3xl font-bold mb-1 text-white text-center" style={{ textShadow: "0 0 12px #00e6ff" }}>{data.title}</h2>
+            <h2 className="text-l sm:text-2xl font-bold mb-1 text-white text-center" style={{ textShadow: "0 0 12px #00e6ff" }}>{data.title}</h2>
            
            
               {/*date */}
@@ -162,7 +162,7 @@ export default function Apod() {
       {collapsed && (
         <button
           className="fixed bottom-7 right-7 z-40 bg-black/50 hover:bg-black/80 rounded-full p-3 shadow-lg"
-          style={{ fontSize: 40, color: "white" }}
+          style={{ fontSize: 35, color: "white" }}
           title="Show Info"
           onClick={() => setCollapsed(false)}
         >
@@ -217,16 +217,16 @@ export default function Apod() {
             <div className="text-lg sm:text-2xl font-bold mb-3 text-black text-center">{data.title}</div>
 
             {/* AI  summary */}
-            <div className="w-full mb-4">
+            <div className="w-full mt-2 mb-4 ">
               <button
                 onClick={handleGetSummary}
-                className="bg-cyan-500 hover:bg-cyan-400 text-white px-4 py-2 rounded-lg font-bold shadow-md"
+                className="bg-cyan-500 hover:bg-cyan-400 text-white px-3 py-1.5 rounded-lg font-bold shadow-md"
               >
-                Summarize with AI
+                Summarize By AI
               </button>
 
              {/* if AI is loading */}
-              {aiLoading && <p className="text-sm text-gray-500 mt-2">I am thinking...</p>}
+              {aiLoading && <p className="text-sm text-gray-500 mt-2">Ummm I am thinking...</p>}
 
              {/* AI summary content */}
               {aiSummary && (

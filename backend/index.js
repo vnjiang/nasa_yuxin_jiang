@@ -23,7 +23,7 @@ app.post('/ai', async (req, res) => {
           {
             parts: [
               {
-                text: `Please summarize the following NASA explanation less than  20 words:\n\n${explanation}`
+                text: `Please summarize the following NASA explanation less than  35 words:\n\n${explanation}`
               }
             ]
           }
