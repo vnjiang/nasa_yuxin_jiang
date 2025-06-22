@@ -47,7 +47,7 @@ Frontend is deployed to Vercel at:
 https://nasa-yuxin-jiang.vercel.app/
 
 Backend is deployed to Render at:
-e.g. https://nasa-yuxin-jiang.onrender.com/
+https://nasa-yuxin-jiang.onrender.com/
 
 
 ## Technologies Used
