@@ -6,7 +6,7 @@ describe('API Endpoints', () => {
 
   describe('GET /apod', () => {
     it('should fetch NASA APOD data', async () => {
-      const res = await request(app).get('/apod');s
+      const res = await request(app).get('/apod');
       expect(res.statusCode).toBe(200);
       expect(res.body).toHaveProperty('date');
       expect(res.body).toHaveProperty('title');
