@@ -1,40 +1,69 @@
+目前你的代码片段没有 README.md 文件，但这是必须的！
 
-Evaluation Criteria:
-● Frontend design & UI/UX
-● Creativity and uniqueness of the concept/回到某一天的火星？或者天文图片？回到你出生那一天的天文图片
-● Quality of data visualisation and presentation
-● Backend architecture and API integration
-● Error handling and edge cases
-● Loading state management
-● Code structure, quality, and best practices
-● File/repository organisation
-● README.md clarity and completeness
-● Deployment of the application (e.g., Vercel, Render, Heroku)
+需要包含：
 
-Bonus Points:
-● Implementing user interactivity (e.g., filters, search functionality)/键盘交互？
-● Responsive design for various screen sizes
-● Performance optimization
-● AI features/加入AI对话功能，机器人对话？返回过去/时空穿越特效？
-● Testing (e.g., Jest, React Testing Library for frontend; Jest for backend)/写测试用例
-● Additional features that enhance the user experience
+项目简介和功能亮点
+这是一个使用nasa open api的每日天文图片和视频的应用，采用科幻沉浸式设计，搭配科幻效果剧情和简单动画，让用户更沉浸的感受天文，并且使用ai能总结详细信息，简化用户的阅读时间
+本项目采用 React 前端 + Node.js/Express 后端分离架构，数据和图片均通过后端转发 NASA API 获取、
 
 
+安装和运行步骤（前后端分别）
+1. use git bash, clone from github
 
-1.加入星球进入特效/web3d
-2.回到某一天的火星？或者天文图片？回到你出生那一天的天文图片
-3.
+git clone https://github.com/vnjiang/nasa_yuxin_jiang.git
+cd nasa_yuxin_jiang
 
-👽 [空间信号接收中……]
-4.你好，时空旅行者。
-欢迎回到你的母星——地球。
-当前地球标准时间：{XXXX}
 
-你手中的这把钥匙，是通向无数时空的通行证。
-只需轻触它，你将穿梭于历史与未来，探索宇宙的奇迹。
+2.本代码不含nasa api key和gemini api key，请去/backend/.env中your_API_kEY替换成自己的key
+网址作为获取api参考
+Nasa：https://api.nasa.gov/
+Gemini：https://aistudio.google.com/apikey
 
-准备好了吗？
-带上你的时空钥匙，开启一场属于你的宇宙冒险吧！
+3. backend和frontend文件夹里安装npm install
 
-webgl地球
-https://threejs.org/examples/?q=eart#webgpu_tsl_earth
+
+4.cd ../frontend
+npm start和
+cd backend
+node index.js
+
+本地开发和部署方法
+
+主要技术栈
+
+环境变量配置说明（如 NASA API key、Gemini API key）
+本代码不含nasa api key和gemini api key，请去/backend/.env中your_API_kEY替换成自己的key
+网址作为获取api参考
+Nasa：https://api.nasa.gov/
+Gemini：https://aistudio.google.com/apikey
+
+部署后的访问链接（如果已部署）
+
+ 代码仓库与提交
+需要将前端和后端代码上传到 GitHub（或其他公开代码平台）。
+
+
+
+. 在线部署（部署到云端）
+需要将你的前端和后端都部署到线上，比如：
+
+前端：Vercel、Netlify、Render、Heroku 等
+
+后端：Render、Heroku、Railway、Vercel Serverless 等
+
+部署完成后，把访问链接（URL）写到 README.md，并在邮件中发给招聘方。
+
+
+
+
+
+## 环境变量
+
+1. 将 `/backend/.env.example` 复制为 `/backend/.env`
+2. 填入你自己的 API KEY：
+    ```
+    NASA_API_KEY=your_nasa_api_key
+    GEMINI_API_KEY=your_gemini_api_key
+    ```
+3. 没有 NASA Key？可以去 https://api.nasa.gov/ 免费申请。
+
