@@ -37,7 +37,7 @@ npm install
 cd frontend 
 npm start 
 
-cd ../backend 
+cd backend 
 node index.js
 
 
@@ -67,7 +67,7 @@ CORS
 3. Testing
 Jest + Supertest
 
-4. Third-party APIs:
+4. Third-party API
 NASA APOD API
 Google Gemini API
 
