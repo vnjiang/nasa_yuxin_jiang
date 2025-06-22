@@ -31,7 +31,7 @@ export default function Apod() {
       setError('');
       setData(null);
       try {
-        const res = await axios.get(`http://localhost:3001/apod?date=${date}`);
+        const res = await axios.get(`https://nasa-yuxin-jiang.onrender.com/apod?date=${date}`);
         setData(res.data);
       } catch (err) {
         setError('The universe was on a break this day. Try picking another date!');
@@ -48,7 +48,7 @@ export default function Apod() {
   const handleGetSummary = async () => {
     setAiLoading(true);
     try {
-      const res = await axios.post('http://localhost:3001/ai', {
+      const res = await axios.post('https://nasa-yuxin-jiang.onrender.com/ai', {
         explanation: data.explanation,
       });
       setAiSummary(res.data.summary);
