@@ -51,13 +51,13 @@ export default function Earth() {
     >
     
 
-    //earth
+     {/*earth*/}
       <div className="w-full h-full flex items-center justify-center" style={{ pointerEvents: "none" }}>
         {/* rotating earth animation */}
         <motion.div
           initial={{ scale: 0.1, opacity: 0.5 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 12, ease: "easeOut" }}  // 12秒
+          transition={{ duration: 12, ease: "easeOut" }}  
           style={{
             width: globeSize,
             height: globeSize,

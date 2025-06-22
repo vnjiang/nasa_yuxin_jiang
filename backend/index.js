@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config(); 
 
 app.use(cors());
-app.use(express.json()); // 保证能解析 req.body
+app.use(express.json()); 
 
 
 app.post('/ai', async (req, res) => {

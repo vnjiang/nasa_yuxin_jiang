@@ -33,7 +33,7 @@ export default function MusicPlayer({ src = "/music/bgm.mp3" }) {
 
   return (
     <>
-      //loop the music 
+      {/*loop the music */} 
       <audio ref={audioRef} src={src} autoPlay loop />
 
       <button
@@ -54,7 +54,7 @@ export default function MusicPlayer({ src = "/music/bgm.mp3" }) {
         title={playing ? "close music" : "open music"}
       >
 
-        //toggle musicplayer icon
+       {/*toggle musicplayer icon */} 
         {playing ? (
           <span role="img" aria-label="sound" style={{ fontSize: 26, color: "#2ec5ff" }}>🔊</span>
         ) : (
