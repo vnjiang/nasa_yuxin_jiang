@@ -1,6 +1,6 @@
 
 Live Demo: https://nasa-yuxin-jiang.vercel.app/
-if you have any question, contact jiangyuxin0326@gmail.com
+if you have any question, feel free to contact jiangyuxin0326@gmail.com，always Welcome to discuss more！
 
 ## Project Overview
 This project is a daily astronomy photo/video explorer built with NASA's Open API, featuring immersive sci-fi UI, simple animations, and AI-powered summary to help users quickly understand astronomical content.
