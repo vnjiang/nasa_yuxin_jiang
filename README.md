@@ -1,5 +1,9 @@
+# NASA Astronomy Explorer
 
 Live Demo: https://nasa-yuxin-jiang.vercel.app/
+
+GitHub: https://github.com/vnjiang/nasa_yuxin_jiang
+
 if you have any question, feel free to contact jiangyuxin0326@gmail.com，always Welcome to discuss more！
 
 ## Project Overview
