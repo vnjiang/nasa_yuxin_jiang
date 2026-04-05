@@ -16,10 +16,10 @@ jobs:
         run: npm install
         working-directory: ./frontend
 
-      - name: Build project
-        run:     
-          export PUBLIC_URL=/nasa_yuxin_jiang
-          npm run build
+      - name: Build project  
+      run: |
+         export PUBLIC_URL=/nasa_yuxin_jiang
+         npm run build
         working-directory: ./frontend
 
       - name: Deploy to GitHub Pages
