@@ -20,7 +20,7 @@ jobs:
         run: npm run build
         working-directory: ./frontend
 
-      # ✅ 关键：清空旧 build
+
       - name: Clean old build
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -30,14 +30,14 @@ jobs:
           script: |
             rm -rf /home/ubuntu/nasa_yuxin_jiang/frontend/build
 
-      # ✅ 上传新 build
+
       - name: Upload to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "frontend/build/*"
+          source: "frontend/build/**"
           target: "/home/ubuntu/nasa_yuxin_jiang/frontend"
 
       - name: Restart server
