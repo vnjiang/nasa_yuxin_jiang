@@ -22,9 +22,12 @@ jobs:
 
       # ✅ 打包 build
       - name: Compress build
+        working-directory: ./frontend
         run: |
-          cd frontend
+          ls
+          ls build
           tar -czf build.tar.gz build
+          ls -lh build.tar.gz
 
       # ✅ 上传 tar
       - name: Upload to EC2
@@ -33,7 +36,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "frontend/build.tar.gz"
+          source: "./frontend/build.tar.gz"
           target: "/home/ubuntu/nasa_yuxin_jiang/frontend"
 
       # ✅ 解压 + 清理
@@ -49,4 +52,6 @@ jobs:
             tar -xzf build.tar.gz
             rm build.tar.gz
 
-            pm2 restart frontend
+            pm2 delete frontend || true
+            pm2 start serve --name frontend -- -s build -l 3000
+            pm2 save
