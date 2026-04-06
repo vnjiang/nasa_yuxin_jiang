@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nasa_yuxin_jiang/static/css/main.d0060875.css",
+    "main.js": "/nasa_yuxin_jiang/static/js/main.8368b544.js",
+    "static/js/453.39fa76bc.chunk.js": "/nasa_yuxin_jiang/static/js/453.39fa76bc.chunk.js",
+    "index.html": "/nasa_yuxin_jiang/index.html",
+    "main.d0060875.css.map": "/nasa_yuxin_jiang/static/css/main.d0060875.css.map",
+    "main.8368b544.js.map": "/nasa_yuxin_jiang/static/js/main.8368b544.js.map",
+    "453.39fa76bc.chunk.js.map": "/nasa_yuxin_jiang/static/js/453.39fa76bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0060875.css",
+    "static/js/main.8368b544.js"
+  ]
+}
