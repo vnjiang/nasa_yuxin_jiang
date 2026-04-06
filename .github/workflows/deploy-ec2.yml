@@ -20,14 +20,6 @@ jobs:
         run: npm run build
         working-directory: ./frontend
 
-      # ✅ 打包 build
-      - name: Compress build
-        working-directory: ./frontend
-        run: |
-          ls
-          ls build
-          tar -czf build.tar.gz build
-          ls -lh build.tar.gz
 
       # ✅ 上传 tar
       - name: Upload to EC2
@@ -36,10 +28,9 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "./frontend/build.tar.gz"
+          source: "./frontend/build"
           target: "/home/ubuntu/nasa_yuxin_jiang/frontend"
 
-      # ✅ 解压 + 清理
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -48,9 +39,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/nasa_yuxin_jiang/frontend
-            rm -rf build
-            tar -xzf build.tar.gz
-            rm build.tar.gz
 
             pm2 delete frontend || true
             pm2 start serve --name frontend -- -s build -l 3000
